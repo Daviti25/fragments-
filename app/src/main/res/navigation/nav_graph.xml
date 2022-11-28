@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.fragments.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/notificationFragment2"
+        android:name="com.example.fragments.fragments.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" >
+        <argument
+            android:name="amount"
+            android:defaultValue="-1"
+            app:argType="integer"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment3"
+        android:name="com.example.fragments.fragments.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment3_to_notificationFragment2"
+            app:destination="@id/notificationFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment3"
+        android:name="com.example.fragments.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
